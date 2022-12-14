@@ -1,0 +1,21 @@
+[package]
+name = "test-sea-orm-sqlite-integer-extraction"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "entity-remove",
+    "entity-insert",
+    "migration",
+]
+
+[dependencies]
+entity-remove = { path = "entity-remove" }
+entity-insert = { path = "entity-insert" }
+
+tokio = { version = "1.23.0", features = ["macros", "rt-multi-thread"] }
+sea-orm = { version = "0.10.4", features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros", "with-chrono", "sqlx-postgres" ], default-features = false }
