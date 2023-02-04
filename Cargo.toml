@@ -17,5 +17,5 @@ members = [
 entity-remove = { path = "entity-remove" }
 entity-insert = { path = "entity-insert" }
 
-tokio = { version = "1.23.0", features = ["macros", "rt-multi-thread"] }
+tokio = { version = "1.24.2", features = ["macros", "rt-multi-thread"] }
 sea-orm = { version = "0.10.4", features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros", "with-chrono", "sqlx-postgres" ], default-features = false }
